@@ -1,6 +1,6 @@
 <li>
   <h3><%= link_to user.name, user %></h3>
-  <%= image_tag user.image_url(:thumb).to_s %><br />
+  <%= image_tag user.image_url(:thumb).to_s  %><br />
 
   Возраст: <%= Time.now.year - user.birthdate.year %> года(лет)<br />
 

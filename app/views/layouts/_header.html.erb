@@ -6,8 +6,12 @@
         <ul class="nav pull-right">
           <li><%#= link_to "Главная", root_path %></li><br />
           <% if signed_in? %>
-            <li><%#= link_to "Пользователи", users_path %></li>
-            Привет <%= current_user.name %>,<br />
+            <li><%#= link_to "Пользователи", users_path %>
+            <div class="img-header">  
+              <%= image_tag current_user.image_url( :thumb).to_s  %>
+              <div class="greeting">Привет <%= current_user.name %>,</div>
+            </div>
+            </li><br />  
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Твои личные данные<b class="caret"></b>
