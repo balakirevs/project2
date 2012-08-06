@@ -1,0 +1,12 @@
+<% provide(:title, 'Зарегистрироваться') %>
+<div class="img-edit">
+  <%= link_to image_tag("moya_vesna.png", alt: "Весна"), root_path %>
+</div>  
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user, :html => {:multipart => true }, size: "300x250") do |f| %>
+      <%= render 'fields', f: f %>
+      <%= f.submit "Зарегистрироваться", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

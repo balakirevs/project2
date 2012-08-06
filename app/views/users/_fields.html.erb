@@ -1,0 +1,50 @@
+<%= render 'shared/error_messages' %>
+  <fieldset>
+    <div class="form_row"> 
+      <%= f.label :surname, "Фамилия*" %> 
+      <%= f.text_field :surname %>
+    </div>
+
+    <div class="form_row">
+      <%= f.label :name, "Имя*" %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="form_row">
+      <%= f.label :middle_name, "Отчество*" %>
+      <%= f.text_field :middle_name %>
+    </div>
+
+      <%= f.label :birthdate, "Дата рождения*" %>
+      <%= f.date_select :birthdate,  :prompt => {:day => 'День', :month => 'Месяц', :year => 'Год'}, :start_year => 1900, :end_year => 2012 %> 
+      <br />
+
+      <%= f.label :city, "Город*" %>
+      <%= f.text_field :city %>
+      <br />
+
+      <%= f.label :gender, "Пол*" %>
+         <%= radio_button :user, :gender, "Male" %>Парень
+         <%= radio_button :user, :gender, "Female" %>Девушка<br />
+      <br />
+
+      <%= f.label :phone, "Моб.телефон*" %>
+      <%= f.text_field :phone, placeholder: "+38(xxx) xxx-xxxx" %>
+      <br />
+      
+      <%= f.label :image, "Фото" %>
+      <%= f.file_field :image %>
+      <br />
+
+      <%= f.label :email, "Email*" %>
+      <%= f.text_field :email %>
+      <br />
+
+      <%= f.label :password, "Пароль*" %>
+      <%= f.password_field :password %>
+      <br />
+
+      <%= f.label :password_confirmation, "Подтверждение*" %>
+      <%= f.password_field :password_confirmation %><br />
+   </fieldset> 
+   
