@@ -21,6 +21,7 @@ gem 'dynamic_form'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
+  gem 'pg', '0.12.2'
   gem 'rspec-rails', '2.10.0'
 end
 
@@ -34,12 +35,13 @@ group :assets do
   gem 'uglifier', '1.2.3'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   
 end
 
 gem 'jquery-rails'
+gem 'pg_search'
 
 group :test do
   gem 'capybara', '1.1.2'
@@ -57,10 +59,10 @@ end
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'

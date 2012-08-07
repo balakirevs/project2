@@ -1,11 +1,14 @@
 <li>
-  <h3><%= link_to user.name, user %></h3>
   <%= image_tag user.image_url(:thumb).to_s  %><br />
-
+  <h4><%= link_to user.name, user %></h4>
+<div class="user-profile">
   Возраст: <%= Time.now.year - user.birthdate.year %> года(лет)<br />
 
   Город: <%= user.city %><br />
 
   На сайте: <%= Time.now.month - user.created_at.month %> месяцев и <%= Time.now.day - user.created_at.day %> дней
+  <br />
+</div>  
+
 
 </li> 

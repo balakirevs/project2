@@ -11,19 +11,11 @@
       <% if @users.any? %>
         <div class="user_avatars">
           <% @users.each do |user| %>
+            <%= user.name %><br />
             <%= image_tag user.image_url(:thumb).to_s %>
           <% end %>
         </div>
       <% end %>
     </section>
   </aside>
-  <div class="span8">
-    <h3><%= @title %></h3>
-    <% if @users.any? %>
-      <ul class="users">
-        <%= render @users %>
-      </ul>
-      <%= will_paginate %>
-    <% end %>
-  </div>
 </div>
